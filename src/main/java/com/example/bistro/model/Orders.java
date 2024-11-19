@@ -26,6 +26,7 @@ public class Orders {
         //訂單資訊
             private String  ordersName;
             private String  ordersTel;
+            private String  eatStatus;
             private Integer ordersSumPrice;
             private Integer pointGetted;
             private String ordersStatus;
