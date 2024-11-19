@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+  <meta charset="UTF-8">
+  <title>首頁</title>
+</head>
+<body>
+<!-- boostrap送的可以調整的排版 -->
+<div class="container">
+  <h1>🐱‍👤🐱‍👤首頁🐱‍👤🐱‍👤</h1>
+  <div>[[ ${logoutOK} ]]</div>
+
+  <h3 th:if="${session.loginUserId}">歡迎登入!! + <span th:text=${session.loginUsername}></span></h3>
+
+  <ul>
+    <!-- 必須要用URL表示式，連結想轉向的網頁Controller，在a標籤中寫th:href="@{路徑}"，這樣context-path路徑改變才會沒差 -->
+    <!-- 等於JSP內呼叫contextPath {pageContext.request.contextPath} -->
+    <li><a th:href="@{/employee/add}">新增員工</a></li>
+    <li><a href="/employee/add">新增員工2</a></li>
+    <li><a th:href="@{/orders/showAllOrders}">列出</a></li>
+
+  </ul>
+
+</div>
+
+</body>
+</html>

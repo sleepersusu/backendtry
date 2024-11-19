@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf 測試</title>
+</head>
+<body>
+<h1>歡迎使用 Thymeleaf</h1>
+<p>當前時間：<span th:text="${#dates.format(#dates.createNow(), 'yyyy-MM-dd HH:mm:ss')}"></span></p>
+</body>
+</html>
+
+
+
