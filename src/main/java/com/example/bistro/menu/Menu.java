@@ -1,5 +1,6 @@
-package com.example.bistro.model;
+package com.example.bistro.menu;
 
+import com.example.bistro.ordersDetails.OrderDetails;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;

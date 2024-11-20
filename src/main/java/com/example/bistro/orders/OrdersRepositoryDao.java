@@ -1,8 +1,6 @@
-package com.example.bistro.model;
+package com.example.bistro.orders;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
 
 public interface OrdersRepositoryDao extends JpaRepository<Orders, Integer> {
 

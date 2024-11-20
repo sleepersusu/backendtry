@@ -1,4 +1,4 @@
-package com.example.bistro.controller;
+package com.example.bistro;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

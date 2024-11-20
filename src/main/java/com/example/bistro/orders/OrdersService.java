@@ -1,6 +1,14 @@
-package com.example.bistro.service;
+package com.example.bistro.orders;
 
-import com.example.bistro.model.*;
+import com.example.bistro.employee.Employee;
+import com.example.bistro.employee.EmployeeRepositoryDao;
+import com.example.bistro.members.Members;
+import com.example.bistro.members.MembersRepositoryDao;
+import com.example.bistro.ordersDetails.OrderDetails;
+import com.example.bistro.ordersDetails.OrderDetailsId;
+import com.example.bistro.ordersDetails.OrderDetailsService;
+import com.example.bistro.seats.Seats;
+import com.example.bistro.seats.SeatsRepositoryDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -88,9 +96,9 @@ public class OrdersService {
 
         //新增訂單並計算總金額
         public Orders addOrdersCount(String ordersName, String ordersTel, String eatStatus,
-                                Integer pointGetted, String ordersStatus, Date createdAt,
-                                String paymentWay, String paymentStatus, Date paymentTime,
-                                Integer memberId, Integer seatsId, Integer employeeId,OrderDetailsId orderDetailsId){
+                                     Integer pointGetted, String ordersStatus, Date createdAt,
+                                     String paymentWay, String paymentStatus, Date paymentTime,
+                                     Integer memberId, Integer seatsId, Integer employeeId, OrderDetailsId orderDetailsId){
             // 根據 memberId, seatsId, 和 employeeId 查找相關實體
                 Members member = OrdersService.findMembersById(memberId);
                 Seats seats = OrdersService.findSeatsById(seatsId);

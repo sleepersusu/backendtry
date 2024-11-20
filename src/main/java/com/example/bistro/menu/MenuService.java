@@ -1,6 +1,5 @@
-package com.example.bistro.service;
+package com.example.bistro.menu;
 
-import com.example.bistro.model.MenuRepositoryDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

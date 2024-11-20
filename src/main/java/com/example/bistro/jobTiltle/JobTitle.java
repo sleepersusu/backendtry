@@ -1,4 +1,4 @@
-package com.example.bistro.model;
+package com.example.bistro.jobTiltle;
 
 import jakarta.persistence.*;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.example.bistro.model;
+package com.example.bistro.seats;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

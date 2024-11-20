@@ -1,9 +1,5 @@
-package com.example.bistro.service;
+package com.example.bistro.ordersDetails;
 
-import com.example.bistro.model.OrderDetails;
-import com.example.bistro.model.OrderDetailsId;
-import com.example.bistro.model.OrderDetailsId;
-import com.example.bistro.model.OrderDetailsRepositoryDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

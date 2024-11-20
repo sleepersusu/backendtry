@@ -1,4 +1,4 @@
-package com.example.bistro.model;
+package com.example.bistro.ordersDetails;
 
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
