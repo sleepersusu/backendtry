@@ -29,21 +29,6 @@ public class OrdersController {
        return "orders/listOrders";
     }
 
-    // 新增訂單的 POST 請求處理
-        @PostMapping("/addOrdersCount")
-        public ResponseEntity<Orders> addOrderCount
-            (@RequestParam String ordersName, @RequestParam String ordersTel,
-             @RequestParam String eatStatus, @RequestParam Integer pointGetted,
-             @RequestParam String ordersStatus, @RequestParam String paymentWay,
-             @RequestParam String paymentStatus, @RequestParam Integer memberId,
-             @RequestParam Integer seatsId, @RequestParam Integer employeeId) {
-        // 創建訂單並返回結果
-                Orders newOrder = ordersService.addOrdersCount(
-                        ordersName, ordersTel, eatStatus, pointGetted, ordersStatus,
-                        null, paymentWay, paymentStatus, null, memberId, seatsId, employeeId);
-
-                return ResponseEntity.ok(newOrder);
-    }
 
 
 

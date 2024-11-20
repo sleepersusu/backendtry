@@ -28,6 +28,8 @@ public class OrdersService {
             public List<Orders> findAllOrders() {
                 return ordersRepositoryDao.findAll();
             }
+
+
         //Read ID 每張表根據ID找尋
             public static Employee findEmpById(Integer ID) {
                 Optional<Employee> optional = employeeRepositoryDao.findById(ID);
@@ -88,13 +90,13 @@ public class OrdersService {
         public Orders addOrdersCount(String ordersName, String ordersTel, String eatStatus,
                                 Integer pointGetted, String ordersStatus, Date createdAt,
                                 String paymentWay, String paymentStatus, Date paymentTime,
-                                Integer memberId, Integer seatsId, Integer employeeId){
+                                Integer memberId, Integer seatsId, Integer employeeId,OrderDetailsId orderDetailsId){
             // 根據 memberId, seatsId, 和 employeeId 查找相關實體
                 Members member = OrdersService.findMembersById(memberId);
                 Seats seats = OrdersService.findSeatsById(seatsId);
                 Employee employee = OrdersService.findEmpById(employeeId);
             // 查詢 orderdetails 來計算訂單總金額
-                List<OrderDetails> orderDetails = orderDetailsService.findByOrderDetailsId(OrderDetailsId);
+                List<OrderDetails> orderDetails = orderDetailsService.findByOrderDetailsId(orderDetailsId);
                 Integer ordersSumPrice = calculateTotalPrice(orderDetails);
             // 創建新的訂單實體
                 Orders orders = new Orders();
